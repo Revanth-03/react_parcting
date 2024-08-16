@@ -1,18 +1,57 @@
-import React, { useState } from "react";
-import Timer from "./Timer";
+import React from "react";
 
-function App() {
-  const [showTimer, setShowTimer] = useState(true);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      value: 1,
+    };
+  }
+  componentDidMount() {
+    console.log("componentMounted");
+    return <h1>componentDidMount</h1>;
+  }
+  componentDidMount() {
+    console.log("componentMounted2");
+    return <h1>componentDidMount</h1>;
+  }
+  componentDidMount() {
+    console.log("componentMounted3");
+    return <h1>componentDidMount</h1>;
+  }
+  componentDidMount() {
+    console.log("componentMounted-1");
+    return <h1>componentDidMount</h1>;
+  }
+  componentDidMount() {
+    console.log("componentMounted0");
+    return <h1>componentDidMount</h1>;
+  }
 
-  return (
-    <div className="App">
-      <h1>Toggle Timer Example</h1>
-      <button onClick={() => setShowTimer(!showTimer)}>
-        {showTimer ? "Hide Timer" : "Show Timer"}
-      </button>
-      {showTimer && <Timer />}
-    </div>
-  );
+  // shouldComponentUpdate(nextprop, nextstate) {
+  //   console.log("nextstate", nextstate);
+  // }
+
+  // componentDidMount() {
+  //   console.log("Mounted");
+
+  //   this.setState({ value: 2 });
+
+  //   this.setState((prevState) => {
+  //     return {
+  //       value: prevState.value + 1,
+  //     };
+  //   });
+  // }
+
+  // componentDidUpdate() {
+  //   console.log("Updated");
+  // }
+
+  render() {
+    // console.log("Rendered");
+    return <div>{this.state.value}</div>;
+  }
 }
 
 export default App;
