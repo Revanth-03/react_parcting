@@ -1,6 +1,7 @@
 import React from "react";
 import FunctionComp from "./FunctionComp";
 import ClassComp from "./ClassComp";
+import TimerFun from "./TimerFun";
 
 class App extends React.Component {
   constructor() {
@@ -56,6 +57,7 @@ class App extends React.Component {
       <div>
         <FunctionComp />
         <ClassComp />
+        <TimerFun />
       </div>
     );
   }
