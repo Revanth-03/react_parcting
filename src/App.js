@@ -1,4 +1,6 @@
 import React from "react";
+import FunctionComp from "./FunctionComp";
+import ClassComp from "./ClassComp";
 
 class App extends React.Component {
   constructor() {
@@ -50,7 +52,12 @@ class App extends React.Component {
 
   render() {
     // console.log("Rendered");
-    return <div>{this.state.value}</div>;
+    return (
+      <div>
+        <FunctionComp />
+        <ClassComp />
+      </div>
+    );
   }
 }
 
